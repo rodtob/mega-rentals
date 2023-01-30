@@ -2,10 +2,29 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const { Webpack } = require('@embroider/webpack');
+const autoprefixer = require('autoprefixer');
+const tailwind = require('tailwindcss');
 
 module.exports = function (defaults) {
-  const app = new EmberApp(defaults, {
-    // Add options here
+  let app = new EmberApp(defaults, {
+    postcssOptions: {
+      compile: {
+        // track changes in template, css, scss, and tailwind config files
+        cacheInclude: [/.*\.(css|scss|hbs)$/, /.tailwind\/config\.js$/],
+        plugins: [
+          {
+            module: autoprefixer,
+            options: {},
+          },
+          {
+            module: tailwind,
+            options: {
+              config: './app/styles/tailwind/config.js',
+            },
+          },
+        ],
+      },
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
