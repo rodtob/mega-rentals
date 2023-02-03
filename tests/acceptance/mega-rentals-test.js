@@ -16,6 +16,7 @@ module('Acceptance | mega rentals', function (hooks) {
     await click('.search');
     await typeIn('.search', 'Sarde');
 
+    await this.pauseTest();
     assert.dom('[data-test-selector="carrer-de-argenter"]').doesNotExist();
   });
 });
