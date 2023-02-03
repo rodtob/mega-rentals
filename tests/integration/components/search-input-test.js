@@ -16,11 +16,9 @@ module('Integration | Component | search-input', function (hooks) {
 
     // Template block usage:
     await render(hbs`
-      <SearchInput>
-        template block text
-      </SearchInput>
+      <SearchInput/>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('');
   });
 });

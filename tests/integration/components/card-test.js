@@ -12,15 +12,13 @@ module('Integration | Component | card', function (hooks) {
 
     await render(hbs`<Card />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element).hasText('---');
 
     // Template block usage:
     await render(hbs`
-      <Card>
-        template block text
-      </Card>
+      <Card @productName='Carrer X'/>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).containsText('Carrer X');
   });
 });

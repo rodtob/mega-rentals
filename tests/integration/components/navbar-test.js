@@ -12,15 +12,13 @@ module('Integration | Component | navbar', function (hooks) {
 
     await render(hbs`<Navbar />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element).hasText('Mega-Rentals');
 
     // Template block usage:
     await render(hbs`
-      <Navbar>
-        template block text
-      </Navbar>
+      <Navbar/>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('Mega-Rentals');
   });
 });
