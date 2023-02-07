@@ -1,10 +1,11 @@
 {{page-title "Index"}}
 <div class="min-h-full">
-  <Navbar/>
+  <Navbar />
   <main>
-    <SearchInput/>
-    <Card @productName='Carrer de Sardenya' @dataTestSelector='carrer-de-sardenya'/>
-    <Card @productName='Carrer de Argenter' @dataTestSelector='carrer-de-argenter'/>
+    <SearchInput />
+    {{#each this.model as |rent|}}
+      <Card @rent={{rent}} @dataTestSelector="carrer-de-sardenya" />
+    {{/each}}
   </main>
 </div>
 {{outlet}}
