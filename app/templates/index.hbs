@@ -2,10 +2,7 @@
 <div class="min-h-full">
   <Navbar />
   <main>
-    <SearchInput />
-    {{#each this.model as |rent|}}
-      <Card @rent={{rent}} @dataTestSelector="carrer-de-sardenya" />
-    {{/each}}
+    <Rentals @rentals={{this.model}} />
   </main>
 </div>
 {{outlet}}
