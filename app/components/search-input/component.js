@@ -10,6 +10,6 @@ export default class SearchInputComponent extends Component {
 
   @action
   search() {
-    this.router.transitionTo('index');
+    this.router.transitionTo(`/${this.query}`);
   }
 }
