@@ -1,6 +1,7 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 import { mockedData } from '../data/mockedData';
+import config from 'mega-rentals/config/environment';
 
 export default class IndexRoute extends Route {
   @service store;
@@ -10,7 +11,7 @@ export default class IndexRoute extends Route {
     // const options = {
     //   method: 'GET',
     //   headers: {
-    //     'X-RapidAPI-Key': '18dd20849emshb815b5fde88afaap1fc853jsn5b0f44c91042',
+    //     'X-RapidAPI-Key': config.API_KEY,
     //     'X-RapidAPI-Host': 'booking-com.p.rapidapi.com',
     //   },
     // };
@@ -20,8 +21,8 @@ export default class IndexRoute extends Route {
     //   options
     // );
     // const { result } = await response.json();
-    // console.log(result)
-
+    // console.log(result);
+    //   return result;
     return mockedData;
   }
 }
