@@ -1,4 +1,5 @@
-<SearchInput/>
-{{#each @rentals as |rent|}}
-  <Card @rent={{rent}}/>
+<div class='rents-wrapper'>
+{{#each @rentals as |product|}}
+  <Card @product={{product}}/>
 {{/each}}
+</div>

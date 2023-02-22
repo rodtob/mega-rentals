@@ -1,8 +1,7 @@
 {{page-title "Index"}}
-<div class="min-h-full">
-  <Navbar />
-  <main>
+  <main class='site-wrapper'>
+    <Navbar />
+    <SearchInput/>
     <Rentals @rentals={{this.model}} />
   </main>
-</div>
 {{outlet}}
