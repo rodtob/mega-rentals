@@ -32,19 +32,25 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 60%;
+  width: 66%;
 }
 
 .rents-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .rent-wrapper {
-  margin-bottom: 2vh;
+  margin: 2vh;  
 }
 
 .img-wrapper {
   width: 10rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
