@@ -17,14 +17,14 @@ export default class IndexRoute extends Route {
       },
     };
 
-    // const response = await fetch(
-    //   `https://booking-com.p.rapidapi.com/v1/hotels/locations?name=${qName}&locale=en-gb`,
-    //   options
-    // );
-    // const result = await response.json();
-    // console.log(result);
-    // console.log(mockedLocationData);
-    // return result;
+    const response = await fetch(
+      `https://booking-com.p.rapidapi.com/v1/hotels/locations?name=${qName}&locale=en-gb`,
+      options
+    );
+    const result = await response.json();
+    console.log(result);
+    return result;
+    console.log(mockedLocationData);
     return mockedLocationData;
   }
 }

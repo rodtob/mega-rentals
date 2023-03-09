@@ -17,17 +17,14 @@ export default class RentalRoute extends Route {
       },
     };
 
-    // const response = await fetch(
-    //   `https://booking-com.p.rapidapi.com/v1/hotels/data?locale=en-gb&hotel_id=${hotelId}`,
-    //   options
-    // )
-    //   .then((response) => response.json())
-    //   .then((response) => console.log(response))
-    //   .catch((err) => console.error(err));
+    const response = await fetch(
+      `https://booking-com.p.rapidapi.com/v1/hotels/data?locale=en-gb&hotel_id=${hotelId}`,
+      options
+    );
 
-    // const result = await response.json();
-    // console.log(result);
-    // return result;
+    const result = await response.json();
+    console.log(result);
+    return result;
 
     return mockedRentalData;
   }
