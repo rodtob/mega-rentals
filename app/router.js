@@ -10,5 +10,7 @@ Router.map(function () {
   Router.map(function () {
     this.route('index', { path: '/' });
     this.route('index', { path: '/:q' });
+    this.route('rentals', { path: '/location/:q' });
+    this.route('rental', { path: '/location/rental/:id' });
   });
 });

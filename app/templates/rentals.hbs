@@ -1,5 +1,8 @@
 {{page-title "Rentals"}}
-<div class="site-wrapper">
-<p>all your rentals</p>
+<h2>Rentals</h2>
+<div class='rents-wrapper'>
+{{#each this.model as |rental|}}
+  <Rental @product={{rental}}/>
+{{/each}}
 </div>
 {{outlet}}

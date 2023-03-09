@@ -2,7 +2,7 @@
   class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 rent-wrapper"
   data-test-selector={{@dataTestSelector}}
 >
-  <a href="#" class='center'>
+  <a href={{concat '/location/' @product.dest_id}} class='center'>
     <img
       class="p-8 rounded-t-lg h-60"
       src={{@product.image_url}}
