@@ -144,7 +144,60 @@ export const mockedLocationData = [
   },
 ];
 
-export const mockedRentalsData = [
+export const mockedRentalsData: Array<{
+  id: number;
+  name: string;
+  mainPhotoId: number;
+  photoMainUrl: string;
+  photoUrls: Array<string>;
+  position: number;
+  rankingPosition: number;
+  countryCode: string;
+  latitude: number;
+  longitude: number;
+  priceBreakdown: {
+    benefitBadges:
+      | [
+          {
+            explanation: string;
+            variant: string;
+            identifier: string;
+            text: string;
+          }
+        ]
+      | [];
+    taxExceptions: [];
+    strikethroughPrice?: {
+      currency: string;
+      value: number;
+    };
+    grossPrice: {
+      value: number;
+      currency: string;
+    };
+  };
+  currency: string;
+  checkin: {
+    fromTime: string;
+    untilTime: string;
+  };
+  checkout: {
+    fromTime: string;
+    untilTime: string;
+  };
+  checkoutDate: string;
+  checkinDate: string;
+  reviewScore: number;
+  reviewScoreWord: string;
+  reviewCount: number;
+  qualityClass: number;
+  isFirstPage: true;
+  accuratePropertyClass: number;
+  propertyClass: number;
+  ufi: number;
+  wishlistName: string;
+  optOutFromGalleryChanges: number;
+}> = [
   {
     id: 3059070,
     name: 'Casa Gloria Apartments',

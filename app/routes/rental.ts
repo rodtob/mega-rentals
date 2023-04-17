@@ -6,7 +6,7 @@ import config from 'mega-rentals/config/environment';
 export default class RentalRoute extends Route {
   @service store;
 
-  async model(params) {
+  async model(params: { id: string }) {
     console.log(params);
     const hotelId = params.id || '1377073';
     const options = {
@@ -17,14 +17,19 @@ export default class RentalRoute extends Route {
       },
     };
 
-    const response = await fetch(
-      `https://booking-com.p.rapidapi.com/v1/hotels/data?locale=en-gb&hotel_id=${hotelId}`,
-      options
-    );
+    // const response = await fetch(
+    //   `https://booking-com.p.rapidapi.com/v1/hotels/data?locale=en-gb&hotel_id=${hotelId}`,
+    //   options
+    // );
 
-    const result = await response.json();
-    console.log(result);
-    return result;
+    // const responsePhoto = await fetch(
+    //   `'https://booking-com.p.rapidapi.com/v1/hotels/photos?locale=en-gb&hotel_id=${}`,
+    //   options
+    // );
+
+    // const result = await response.json();
+    // console.log(result);
+    // return result;
 
     return mockedRentalData;
   }

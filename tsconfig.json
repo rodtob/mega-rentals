@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      // Strictness settings -- you should *not* change these: Ember code is not
+      // guaranteed to type check with these set to looser values.
+      "strict": true,
+      "noUncheckedIndexedAccess": true,
+  
+      // You should feel free to change these, especially if you are already
+      // covering them via linting (e.g. with @typescript-eslint).
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noPropertyAccessFromIndexSignature": true,
+      "noImplicitAny": false,
+    },
+    "exclude":
+    [
+     "node_modules"
+    ]
+  }
